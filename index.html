@@ -1,0 +1,1661 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10091d">
+
+<title>Happy Birthday Bro 🎂</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --bg: #10091d;
+  --purple: #a78bfa;
+  --purple-light: #d8c7ff;
+  --gold: #ffd580;
+  --white: #ffffff;
+  --muted: #c8bfd8;
+  --glass: rgba(255,255,255,.06);
+  --border: rgba(255,255,255,.13);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+  color: var(--white);
+
+  background:
+    radial-gradient(ellipse at 15% 15%, #42245f 0%, transparent 40%),
+    radial-gradient(ellipse at 90% 80%, #30204d 0%, transparent 40%),
+    var(--bg);
+
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.background-glow {
+  position: fixed;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: #a78bfa;
+  filter: blur(130px);
+  opacity: .13;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-one {
+  top: -100px;
+  left: -100px;
+}
+
+.glow-two {
+  bottom: -100px;
+  right: -100px;
+  background: #ffd580;
+}
+
+#particles {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floating-cake {
+  position: absolute;
+  bottom: -50px;
+  opacity: 0;
+  animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: .7;
+  }
+
+  90% {
+    opacity: .5;
+  }
+
+  100% {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+header {
+  position: relative;
+  z-index: 2;
+
+  width: min(1100px, 92%);
+  margin: auto;
+  padding: 22px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.logo {
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 13px;
+}
+
+.music-btn {
+  border: 1px solid var(--border);
+  background: var(--glass);
+  color: white;
+
+  padding: 11px 17px;
+  border-radius: 50px;
+
+  backdrop-filter: blur(15px);
+  transition: .25s;
+}
+
+.music-btn:hover {
+  background: rgba(255,213,128,.12);
+  transform: translateY(-2px);
+}
+
+main {
+  position: relative;
+  z-index: 1;
+
+  width: min(1000px, 92%);
+  margin: auto;
+
+  padding: 30px 0 80px;
+}
+
+.hero {
+  min-height: 470px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 30px 12px;
+}
+
+.hero-cake {
+  font-size: clamp(65px, 13vw, 100px);
+  animation: cakeBounce 2s infinite;
+  filter: drop-shadow(0 0 20px rgba(255,213,128,.25));
+}
+
+@keyframes cakeBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.eyebrow {
+  margin-top: 22px;
+
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(40px, 8vw, 78px);
+  line-height: 1.12;
+
+  margin: 18px 0;
+
+  background: linear-gradient(
+    120deg,
+    #ffffff,
+    #ffe4ad,
+    #c8b2ff
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  max-width: 570px;
+
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.primary-btn {
+  margin-top: 27px;
+
+  border: 0;
+  border-radius: 50px;
+
+  padding: 14px 25px;
+
+  color: #21152f;
+  font-weight: 700;
+
+  background: linear-gradient(
+    135deg,
+    #ffe0a6,
+    #cbb5ff
+  );
+
+  box-shadow: 0 8px 35px rgba(255,213,128,.12);
+
+  transition: .25s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(255,213,128,.25);
+}
+
+.section {
+  margin-top: 70px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-heading span {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(28px, 5vw, 42px);
+  margin-top: 10px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.7;
+}
+
+/* GIFT CARDS */
+
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.gift-card {
+  min-height: 190px;
+
+  padding: 25px 18px;
+
+  text-align: center;
+  color: white;
+
+  border: 1px solid var(--border);
+  border-radius: 22px;
+
+  background: var(--glass);
+  backdrop-filter: blur(18px);
+
+  transition: .3s;
+}
+
+.gift-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255,213,128,.5);
+  background: rgba(255,255,255,.1);
+}
+
+.gift-icon {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.gift-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+}
+
+.gift-card p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+  margin-top: 9px;
+}
+
+/* BIRTHDAY LETTER */
+
+.letter-card {
+  max-width: 760px;
+  margin: auto;
+
+  padding: 32px;
+
+  text-align: center;
+
+  border: 1px solid var(--border);
+  border-radius: 25px;
+
+  background: var(--glass);
+  backdrop-filter: blur(18px);
+}
+
+.letter-icon {
+  font-size: 45px;
+}
+
+.letter-card h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.letter-card > p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.letter-content {
+  display: none;
+
+  margin-top: 25px;
+
+  color: #e8ddff;
+  font-size: 14px;
+  line-height: 2;
+
+  text-align: left;
+  white-space: pre-line;
+}
+
+.letter-content.show {
+  display: block;
+  animation: fadeIn .7s ease;
+}
+
+/* CAKE SECTION */
+
+.cake-card {
+  text-align: center;
+
+  padding: 35px 20px;
+
+  border: 1px solid var(--border);
+  border-radius: 25px;
+
+  background: var(--glass);
+}
+
+.cake {
+  display: inline-block;
+
+  font-size: 85px;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition: .3s;
+  animation: cakeBounce 2s infinite;
+}
+
+.cake:hover {
+  transform: scale(1.1);
+}
+
+.cake-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin: 15px 0 10px;
+}
+
+.cake-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* FOOTER */
+
+footer {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+
+  color: #b7a8ca;
+  font-size: 12px;
+  line-height: 2;
+
+  padding: 35px 15px;
+}
+
+/* ENTRY SCREEN */
+
+#entrance {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background:
+    radial-gradient(ellipse at center, #38204f, #10091d 70%);
+
+  transition: opacity .7s, visibility .7s;
+}
+
+#entrance.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.entrance-card {
+  width: min(450px, 100%);
+
+  padding: 38px 25px;
+
+  text-align: center;
+
+  border: 1px solid var(--border);
+  border-radius: 28px;
+
+  background: rgba(255,255,255,.06);
+  backdrop-filter: blur(20px);
+}
+
+.big-cake {
+  font-size: 85px;
+  animation: cakeBounce 2s infinite;
+}
+
+.entrance-card h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 35px;
+  margin: 18px 0;
+}
+
+.entrance-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* MODAL */
+
+#modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(5,2,12,.75);
+  backdrop-filter: blur(10px);
+}
+
+#modal.show {
+  display: flex;
+  animation: fadeIn .25s;
+}
+
+.modal-card {
+  position: relative;
+
+  width: min(450px, 100%);
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  border: 1px solid var(--border);
+  border-radius: 25px;
+
+  background: linear-gradient(
+    145deg,
+    #2c1741,
+    #170d27
+  );
+
+  box-shadow: 0 20px 80px rgba(0,0,0,.3);
+}
+
+.modal-icon {
+  font-size: 65px;
+}
+
+.modal-card h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.modal-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+
+  width: 35px;
+  height: 35px;
+
+  border: 1px solid var(--border);
+  border-radius: 50%;
+
+  color: white;
+  background: var(--glass);
+}
+
+/* TOAST */
+
+#toast {
+  position: fixed;
+
+  bottom: 25px;
+  left: 50%;
+
+  transform: translate(-50%, 20px);
+
+  z-index: 30;
+
+  background: #fff1d6;
+  color: #2b1a37;
+
+  padding: 12px 20px;
+  border-radius: 50px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: .3s;
+
+  text-align: center;
+
+  width: max-content;
+  max-width: 90%;
+}
+
+#toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  header {
+    padding: 17px 0;
+  }
+
+  main {
+    padding-top: 10px;
+  }
+
+  .hero {
+    min-height: 430px;
+  }
+
+  .gift-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gift-card {
+    min-height: 150px;
+  }
+
+  .section {
+    margin-top: 50px;
+  }
+
+  .letter-card {
+    padding: 25px 18px;
+  }
+
+  .cake-card {
+    padding: 25px 15px;
+  }
+
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===================================
+     🎵 BIRTHDAY MUSIC
+=================================== -->
+
+<audio id="birthdayMusic" loop preload="none">
+  <source
+    src="https://www.image2url.com/r2/default/audio/1792482837683-9f251217-5a80-4606-af42-dd5a65c183f6.mp3"
+    type="audio/mpeg">
+</audio>
+
+<div class="background-glow glow-one"></div>
+<div class="background-glow glow-two"></div>
+
+<div id="particles"></div>
+
+
+<!-- ===================================
+     🎂 ENTRY SCREEN
+=================================== -->
+
+<div id="entrance">
+
+  <div class="entrance-card">
+
+    <div class="big-cake">🎂</div>
+
+    <div class="eyebrow">
+      A Birthday Surprise
+    </div>
+
+    <h2>
+      Happy Birthday,<br>
+      Bro!
+    </h2>
+
+    <p>
+      A special birthday surprise made
+      just for you, buddy.
+      Get ready for a little celebration!
+    </p>
+
+    <button
+      class="primary-btn"
+      onclick="openSurprise()">
+
+      Open Your Birthday Surprise
+
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- ===================================
+     HEADER
+=================================== -->
+
+<header>
+
+  <div class="logo">
+    BIRTHDAY CELEBRATION
+  </div>
+
+  <button
+    class="music-btn"
+    id="musicBtn"
+    onclick="toggleMusic()"
+    aria-label="Play or pause birthday music">
+
+    Music: OFF
+
+  </button>
+
+</header>
+
+
+<!-- ===================================
+     MAIN
+=================================== -->
+
+<main>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-cake">
+      🎂
+    </div>
+
+    <div class="eyebrow">
+      Today is your special day
+    </div>
+
+    <h1 id="birthdayTitle">
+      Happy Birthday,<br>
+      Bro!
+    </h1>
+
+    <p>
+      Wishing you a day full of happiness,
+      laughter, unforgettable memories,
+      and success.
+
+      Keep smiling, keep growing,
+      and enjoy every moment of your
+      special day!
+    </p>
+
+    <button
+      class="primary-btn"
+      onclick="scrollToGifts()">
+
+      Discover Your Birthday Gifts
+
+    </button>
+
+  </section>
+
+
+  <!-- ===================================
+       BIRTHDAY GIFTS
+  =================================== -->
+
+  <section class="section" id="gifts">
+
+    <div class="section-heading">
+
+      <span>
+        Made for your special day
+      </span>
+
+      <h2>
+        Three Birthday Surprises
+      </h2>
+
+      <p>
+        Tap each card to discover
+        your birthday message.
+      </p>
+
+    </div>
+
+
+    <div class="gift-grid">
+
+
+      <button
+        class="gift-card"
+        onclick="openGift(0)">
+
+        <div class="gift-icon">
+          🎂
+        </div>
+
+        <h3>
+          Birthday Wishes
+        </h3>
+
+        <p>
+          A special wish for you
+        </p>
+
+      </button>
+
+
+      <button
+        class="gift-card"
+        onclick="openGift(1)">
+
+        <div class="gift-icon">
+          🎂
+        </div>
+
+        <h3>
+          Friendship
+        </h3>
+
+        <p>
+          A message for a good friend
+        </p>
+
+      </button>
+
+
+      <button
+        class="gift-card"
+        onclick="openGift(2)">
+
+        <div class="gift-icon">
+          🎂
+        </div>
+
+        <h3>
+          Best Wishes
+        </h3>
+
+        <p>
+          A little motivation for your future
+        </p>
+
+      </button>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- ===================================
+       BIRTHDAY LETTER
+  =================================== -->
+
+  <section class="section">
+
+    <div class="section-heading">
+
+      <span>
+        A message from your friend
+      </span>
+
+      <h2>
+        Birthday Letter
+      </h2>
+
+      <p>
+        A few words to make your day special.
+      </p>
+
+    </div>
+
+
+    <div class="letter-card">
+
+      <div class="letter-icon">
+        🎂
+      </div>
+
+      <h2>
+        To My Buddy
+      </h2>
+
+      <p>
+        Every birthday is a new beginning.
+        Here is a little message for you.
+      </p>
+
+
+      <button
+        class="primary-btn"
+        id="letterBtn"
+        onclick="revealLetter()">
+
+        Open Your Birthday Letter
+
+      </button>
+
+
+      <div
+        class="letter-content"
+        id="letterContent">
+
+Happy Birthday, Bro! 🎂
+
+Today is your special day,
+and I wish you all the happiness,
+success, and good moments
+life can offer.
+
+May your hard work bring great
+achievements, your dreams become
+reality, and every new year give
+you more reasons to celebrate.
+
+Thanks for being a good friend.
+
+Keep smiling, stay confident,
+and enjoy every moment of life.
+
+May your future be full of
+exciting opportunities,
+great memories, and success.
+
+Have an amazing birthday
+and an unforgettable year ahead!
+
+Happy Birthday, Buddy! 🎂
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===================================
+       BIRTHDAY CAKE
+  =================================== -->
+
+  <section class="section">
+
+    <div class="section-heading">
+
+      <span>
+        Your birthday moment
+      </span>
+
+      <h2>
+        Make a Birthday Wish
+      </h2>
+
+      <p>
+        Tap the cake and celebrate!
+      </p>
+
+    </div>
+
+
+    <div class="cake-card">
+
+      <div
+        class="cake"
+        id="cake"
+        role="button"
+        tabindex="0"
+        aria-label="Make a birthday wish"
+        onclick="makeWish()"
+        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();makeWish();}">
+
+        🎂
+
+      </div>
+
+
+      <h3>
+        Make a Wish!
+      </h3>
+
+      <p>
+        Think of something you want
+        to achieve this year.
+
+        Tap the cake to celebrate
+        your birthday!
+      </p>
+
+
+      <button
+        class="primary-btn"
+        onclick="makeWish()">
+
+        Celebrate My Birthday
+
+      </button>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+<!-- ===================================
+     FOOTER
+=================================== -->
+
+<footer>
+
+  Made for a great friend
+
+  <br>
+
+  Have an amazing birthday!
+
+  <br>
+
+  🎂
+
+</footer>
+
+
+<!-- ===================================
+     BIRTHDAY MODAL
+=================================== -->
+
+<div
+  id="modal"
+  onclick="closeModalOutside(event)">
+
+  <div class="modal-card">
+
+    <button
+      class="close-btn"
+      onclick="closeModal()"
+      aria-label="Close">
+
+      Close
+
+    </button>
+
+
+    <div
+      class="modal-icon"
+      id="modalIcon">
+
+      🎂
+
+    </div>
+
+
+    <h2 id="modalTitle">
+      Birthday Surprise
+    </h2>
+
+
+    <p id="modalMessage">
+      Happy Birthday, Bro!
+    </p>
+
+
+    <button
+      class="primary-btn"
+      onclick="closeModal()">
+
+      Back to Birthday
+
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- ===================================
+     TOAST
+=================================== -->
+
+<div
+  id="toast"
+  role="status"
+  aria-live="polite">
+
+</div>
+
+
+<!-- ===================================
+     JAVASCRIPT
+=================================== -->
+
+<script>
+
+/* =====================================
+   PERSONALIZE THE WEBSITE
+===================================== */
+
+const CONFIG = {
+
+  // Change your friend's name here
+  name: "Bro",
+
+  gifts: [
+
+    {
+      icon: "🎂",
+
+      title: "Birthday Wishes",
+
+      message:
+        "Happy Birthday, buddy! " +
+        "May your life be filled with happiness, " +
+        "success, good health, and amazing memories. " +
+        "May every new day bring you " +
+        "something wonderful. " +
+        "Enjoy your special day!"
+    },
+
+
+    {
+      icon: "🎂",
+
+      title: "Friendship",
+
+      message:
+        "Good friends make life more enjoyable " +
+        "and memories more special. " +
+        "Thanks for being a great friend. " +
+        "Wishing you an awesome birthday " +
+        "and an even better year ahead!"
+    },
+
+
+    {
+      icon: "🎂",
+
+      title: "Best Wishes",
+
+      message:
+        "Keep chasing your dreams, " +
+        "stay confident, and never stop " +
+        "believing in yourself. " +
+        "May your future be filled with " +
+        "success, happiness, and exciting adventures. " +
+        "Happy Birthday, bro!"
+    }
+
+  ]
+
+};
+
+
+/* =====================================
+   MUSIC
+===================================== */
+
+let musicPlaying = false;
+
+async function toggleMusic() {
+
+  const music =
+    document.getElementById("birthdayMusic");
+
+  const button =
+    document.getElementById("musicBtn");
+
+
+  if (!music) {
+
+    showToast("Birthday music unavailable");
+
+    return;
+
+  }
+
+
+  if (musicPlaying) {
+
+    music.pause();
+
+    musicPlaying = false;
+
+    button.textContent = "Music: OFF";
+
+    showToast("Music paused");
+
+    return;
+
+  }
+
+
+  try {
+
+    music.volume = 0.7;
+
+    await music.play();
+
+    musicPlaying = true;
+
+    button.textContent = "Music: ON";
+
+    showToast("Birthday music is playing!");
+
+  }
+
+  catch (error) {
+
+    musicPlaying = false;
+
+    button.textContent = "Music: OFF";
+
+    showToast(
+      "Music could not play. Check your internet connection."
+    );
+
+  }
+
+}
+
+
+/* =====================================
+   OPEN BIRTHDAY SURPRISE
+===================================== */
+
+function open_surprise_screen() {
+
+  const entrance =
+    document.getElementById("entrance");
+
+  entrance.classList.add("hide");
+
+  createConfetti();
+
+  createFloatingCakes();
+
+  showToast("Let the birthday celebration begin!");
+
+}
+
+
+/* Main entrance function */
+
+function open_surprise() {
+
+  open_surprise_screen();
+
+}
+
+
+/* =====================================
+   SCROLL TO GIFTS
+===================================== */
+
+function scrollToGifts() {
+
+  document
+    .getElementById("gifts")
+    .scrollIntoView({
+      behavior: "smooth"
+    });
+
+}
+
+
+/* =====================================
+   OPEN GIFT
+===================================== */
+
+function openGift(index) {
+
+  const gift =
+    CONFIG.gifts[index];
+
+
+  if (!gift) return;
+
+
+  document
+    .getElementById("modalIcon")
+    .textContent = gift.icon;
+
+
+  document
+    .getElementById("modalTitle")
+    .textContent = gift.title;
+
+
+  document
+    .getElementById("modalMessage")
+    .textContent = gift.message;
+
+
+  document
+    .getElementById("modal")
+    .classList.add("show");
+
+
+  createConfetti();
+
+}
+
+
+/* =====================================
+   CLOSE MODAL
+===================================== */
+
+function closeModal() {
+
+  document
+    .getElementById("modal")
+    .classList.remove("show");
+
+}
+
+
+function closeModalOutside(event) {
+
+  if (event.target.id === "modal") {
+
+    closeModal();
+
+  }
+
+}
+
+
+/* =====================================
+   REVEAL LETTER
+===================================== */
+
+function revealLetter() {
+
+  const letter =
+    document.getElementById("letterContent");
+
+  const button =
+    document.getElementById("letterBtn");
+
+
+  letter.classList.toggle("show");
+
+
+  if (letter.classList.contains("show")) {
+
+    button.textContent =
+      "Close Birthday Letter";
+
+    showToast("Birthday letter opened!");
+
+    createConfetti();
+
+  }
+
+  else {
+
+    button.textContent =
+      "Open Your Birthday Letter";
+
+  }
+
+}
+
+
+/* =====================================
+   BIRTHDAY WISH
+===================================== */
+
+function makeWish() {
+
+  showToast(
+    "May your birthday wish come true!"
+  );
+
+
+  createConfetti();
+
+
+  const cake =
+    document.getElementById("cake");
+
+
+  cake.textContent = "🎂";
+
+
+  setTimeout(() => {
+
+    cake.textContent = "🎂";
+
+  }, 1500);
+
+}
+
+
+/* =====================================
+   TOAST MESSAGE
+===================================== */
+
+let toastTimer;
+
+function showToast(message) {
+
+  const toast =
+    document.getElementById("toast");
+
+
+  toast.textContent = message;
+
+  toast.classList.add("show");
+
+
+  clearTimeout(toastTimer);
+
+
+  toastTimer = setTimeout(() => {
+
+    toast.classList.remove("show");
+
+  }, 2800);
+
+}
+
+
+/* =====================================
+   BIRTHDAY CONFETTI
+===================================== */
+
+function createConfetti() {
+
+  const confettiItems = [
+    "🎂",
+    "🎂",
+    "🎂",
+    "🎂",
+    "🎂"
+  ];
+
+
+  for (let i = 0; i < 35; i++) {
+
+    const particle =
+      document.createElement("div");
+
+
+    particle.textContent =
+      confettiItems[
+        Math.floor(
+          Math.random() * confettiItems.length
+        )
+      ];
+
+
+    particle.style.position = "fixed";
+
+
+    particle.style.left =
+      Math.random() * 100 + "vw";
+
+
+    particle.style.top = "-40px";
+
+
+    particle.style.fontSize =
+      (12 + Math.random() * 20) + "px";
+
+
+    particle.style.zIndex = "50";
+
+
+    particle.style.pointerEvents = "none";
+
+
+    particle.style.transition =
+      "transform 2.5s ease-in, opacity 2.5s ease-in";
+
+
+    document.body.appendChild(particle);
+
+
+    const x =
+      (Math.random() - 0.5) * 250;
+
+
+    const y =
+      window.innerHeight + 100;
+
+
+    requestAnimationFrame(() => {
+
+      particle.style.transform =
+        `translate(${x}px, ${y}px) rotate(${Math.random() * 500}deg)`;
+
+
+      particle.style.opacity = "0";
+
+    });
+
+
+    setTimeout(() => {
+
+      particle.remove();
+
+    }, 2800);
+
+  }
+
+}
+
+
+/* =====================================
+   FLOATING BIRTHDAY CAKES
+===================================== */
+
+function createFloatingCakes() {
+
+  const container =
+    document.getElementById("particles");
+
+
+  setInterval(() => {
+
+    const cake =
+      document.createElement("div");
+
+
+    cake.className =
+      "floating-cake";
+
+
+    cake.textContent = "🎂";
+
+
+    cake.style.left =
+      Math.random() * 100 + "%";
+
+
+    cake.style.fontSize =
+      (12 + Math.random() * 18) + "px";
+
+
+    const duration =
+      8 + Math.random() * 7;
+
+
+    cake.style.animationDuration =
+      duration + "s";
+
+
+    container.appendChild(cake);
+
+
+    setTimeout(() => {
+
+      cake.remove();
+
+    }, duration * 1000);
+
+  }, 1200);
+
+}
+
+
+/* =====================================
+   INITIALIZATION
+===================================== */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+
+    const heading =
+      document.getElementById("birthdayTitle");
+
+
+    heading.innerHTML =
+      `Happy Birthday,<br>${CONFIG.name}!`;
+
+
+    document.body.style.overflow =
+      "auto";
+
+  }
+);
+
+
+/* =====================================
+   ESCAPE KEY
+===================================== */
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+
+    if (event.key === "Escape") {
+
+      closeModal();
+
+    }
+
+  }
+);
+
+
+/* =====================================
+   BUTTON FUNCTION
+===================================== */
+
+function openSurprise() {
+
+  open_surprise_screen();
+
+}
+
+</script>
+
+</body>
+</html>
